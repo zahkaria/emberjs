@@ -1,0 +1,140 @@
+/* ========================================================================= */
+/* Mixins */
+
+@mixin embed-font($name: 'MyFont', $src: 'MyFont-webfont', $style: regular, $svgid: 'MyFont'){
+	@font-face {
+		font-family: '#{$name}';
+		src: url('#{$src}.eot');
+		src: url('#{$src}.eot?#iefix') format('embedded-opentype'),
+			 url('#{$src}.woff') format('woff'),
+			 url('#{$src}.ttf') format('truetype'),
+			 url('#{$src}.svg##{$svgid}') format('svg');
+
+		@if $style == bold {
+			font-weight: bold;
+			font-style: normal;
+		} @else if $style == italic {
+			font-weight: normal;
+			font-style: italic;
+		} @else if $style == bold-italic {
+			font-weight: bold;
+			font-style: italic;
+		} @else {
+			font-weight: normal;
+			font-style: normal;
+		}
+
+	}
+}
+
+@mixin clearfix($selector: '.clearfix') {
+	#{$selector} {
+		zoom: 1;
+		&:before,
+		&:after {
+			display: block;
+			visibility: hidden;
+			width: 0;
+			height: 0;
+			overflow: hidden;
+			font-size: 0;
+			line-height: 0;
+			content: ".";
+		}
+		&:after {
+			clear: both;
+		}
+	}
+}
+
+@mixin gradient-bg($header_start_colour: #ccc, $header_end_colour: #666) {
+	background: $header_start_colour;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $header_start_colour), color-stop(100%, $header_end_colour));
+	background: -webkit-linear-gradient(top, $header_start_colour 0%, $header_end_colour 100%);
+	background: -moz-linear-gradient(top, $header_start_colour 0%, $header_end_colour 100%);
+	background: -ms-linear-gradient(top, $header_start_colour 0%, $header_end_colour 100%);
+	background: -o-linear-gradient(top, $header_start_colour 0%, $header_end_colour 100%);
+	background: linear-gradient(top, $header_start_colour 0%, $header_end_colour 100%);
+	/* IE8< filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$header_start_colour', endColorstr='$header_end_colour', GradientType=0); */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$header_start_colour', endColorstr='$header_end_colour', GradientType=0)";
+}
+
+@mixin transition($properties: all, $duration: 1s, $timing_function: ease, $delay: 0s) {
+	-webkit-transition: $properties $duration $timing_function $delay;
+	-moz-transition: $properties $duration $timing_function $delay;
+	-ms-transition: $properties $duration $timing_function $delay;
+	-o-transition: $properties $duration $timing_function $delay;
+	transition: $properties $duration $timing_function $delay;
+}
+
+@mixin opacity($amount: 0.666) {
+	-webkit-opacity: $amount;
+	-moz-opacity: $amount;
+	-ms-opacity: $amount;
+	-o-opacity: $amount;
+	opacity: $amount;
+}
+
+@mixin box-shadow($x: 0, $y: 0, $blur: 0, $spread: 0, $colour: #000) {
+	-webkit-box-shadow: $x $y $blur $spread $colour;
+	-moz-box-shadow: $x $y $blur $spread $colour;
+	-ms-box-shadow: $x $y $blur $spread $colour;
+	-o-box-shadow: $x $y $blur $spread $colour;
+	box-shadow: $x $y $blur $spread $colour;
+}
+
+@mixin inset-box-shadow($x: 0, $y: 0, $blur: 0, $spread: 0, $colour: #000) {
+	-webkit-box-shadow: inset $x $y $blur $spread $colour;
+	-moz-box-shadow: inset $x $y $blur $spread $colour;
+	-ms-box-shadow: inset $x $y $blur $spread $colour;
+	-o-box-shadow: inset $x $y $blur $spread $colour;
+	box-shadow: inset $x $y $blur $spread $colour;
+}
+
+@mixin text-shadow($colour: #000, $x: 0, $y: 0, $blur: 0) {
+	-webkit-text-shadow: $colour $x $y $blur;
+	-moz-text-shadow: $colour $x $y $blur;
+	-ms-text-shadow: $colour $x $y $blur;
+	-o-text-shadow: $colour $x $y $blur;
+	text-shadow: $colour $x $y $blur;
+}
+
+@mixin rotate($amount: 45deg) {
+	-webkit-transform: rotate($amount);
+	-moz-transform: rotate($amount);
+	-ms-transform: rotate($amount);
+	-o-transform: rotate($amount);
+	transform: rotate($amount);
+}
+
+@mixin translate($tx: 0, $ty: 0) {
+	-webkit-transform: translate($tx, $ty);
+	-moz-transform: translate($tx, $ty);
+	-ms-transform: translate($tx, $ty);
+	-o-transform: translate($tx, $ty);
+	transform: translate($tx, $ty);
+}
+
+@mixin scale($amount: 1) {
+	-webkit-transform: scale($amount);
+	-moz-transform: scale($amount);
+	-ms-transform: scale($amount);
+	-o-transform: scale($amount);
+	transform: scale($amount);
+}
+
+@mixin rotate-translate($amount: 45deg, $tx: 0, $ty: 0) {
+	-webkit-transform: rotate($amount) translate($tx, $ty);
+	-moz-transform: rotate($amount) translate($tx, $ty);
+	-ms-transform: rotate($amount) translate($tx, $ty);
+	-o-transform: rotate($amount) translate($tx, $ty);
+	transform: rotate($amount) translate($tx, $ty);
+}
+
+@mixin border-radius($tl: 0, $tr: 0, $br: 0, $bl: 0) {
+	-webkit-border-radius: $tl $tr $br $bl;
+	-moz-border-radius: $tl $tr $br $bl;
+	-ms-border-radius: $tl $tr $br $bl;
+	-o-border-radius: $tl $tr $br $bl;
+	border-radius: $tl $tr $br $bl;
+}

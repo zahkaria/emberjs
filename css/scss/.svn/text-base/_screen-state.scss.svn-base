@@ -1,0 +1,7 @@
+
+// Small mobile device (iPhone, Android phone, etc.)
+@media all and (max-width: 500px){
+	#navigation {
+		display: none;
+	}
+}

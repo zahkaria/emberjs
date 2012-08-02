@@ -1,0 +1,40 @@
+
+@include embed-font('Aller', 'fonts/aller/aller_rg-webfont', regular, 'AllerRegular');
+@include embed-font('Bitter', 'fonts/bitter/Bitter-Regular-webfont', regular, 'BitterRegular');
+@include embed-font('Bitter', 'fonts/bitter/Bitter-Bold-webfont', bold, 'BitterBold');
+@include embed-font('Bitter', 'fonts/bitter/Bitter-Italic-webfont', italic, 'BitterItalic');
+@include embed-font('Journal', 'fonts/journal/journal-webfont', regular, 'webfontGhV9TBys');
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font: 62.5%/1.5 'Aller','Helvetica Neue',Arial,sans-serif;
+	background: $grey3;
+	color: $white;
+}
+
+.js body {
+	overflow: hidden;
+}
+
+a {
+	color: $pink1;
+	text-decoration: none;
+
+	&:hover, &:active {
+		text-decoration: underline;
+	}
+}
+
+
+header, article, section, footer {
+	display: block;
+}
+
+
+header, #about, #artworks {
+	font-size: 1.5em;
+}

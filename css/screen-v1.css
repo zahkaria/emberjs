@@ -1,0 +1,115 @@
+#homepage-banner {
+	position: relative;
+	width: 960px;
+	height: 276px;
+	overflow: hidden;
+	background: url(../images/bg_v1_banner.png) no-repeat;
+}
+
+#homepage-banner-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1337;
+	padding: 46px 0 0 43px;
+}
+
+#homepage-banner-nav h1 {
+	color: #fff;
+	font-size: 3.2em;
+	width: 356px;
+}
+#homepage-banner-nav ul  {
+	margin: 10px 0 0 25px;
+	padding: 0;
+}
+
+#homepage-banner-nav ul li {
+	color: #fff;
+	list-style-type: none;
+	display: inline-block;
+	margin-left: -51px;
+}
+
+#homepage-banner-nav ul  li a {
+	text-decoration: none;
+	color: #fff;
+	text-indent: -999em;
+	float: left;
+	background: url(../images/bg_banner_nav_sprites.png) no-repeat scroll -11px -16px;
+	width: 176px;
+	height: 152px;
+	
+}
+
+#homepage-banner-nav ul  li a:hover {
+	background-position: -195px -15px;
+	
+}
+
+#homepage-banner-nav ul  li.retirement a:hover {
+	background-position: -195px -178px;
+}
+
+#homepage-banner-nav ul  li.employers a:hover {
+	background-position: -195px -346px;
+}
+
+#homepage-banner-nav ul  li.retirement a {
+	background-position: -11px -177px;
+}
+
+#homepage-banner-nav ul  li.employers a {
+	background-position: -11px -346px;
+}
+
+#homepage-banner-carousel {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 532px;
+	height: 276px;
+	z-index: 42;
+}
+
+.carousel-item {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 532px;
+	height: 276px;
+	text-indent: -999em;
+}
+
+.carousel-item.current {
+	display: block;
+}
+
+#homepage-banner-carousel .nav {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#homepage-banner-carousel .nav li {
+	display: block;
+	float: left;
+	clear: none;
+	width: 16px;
+	height: 20px;
+	margin-left: 4px;
+	background: url(../images/bg_v1_banner_carousel_nav.png) no-repeat;
+	cursor: pointer;
+}
+
+#homepage-banner-carousel .nav li.current {
+	background: url(../images/bg_v1_banner_carousel_nav_current.png) no-repeat !important;
+}
+
+#homepage-banner-carousel .nav li:hover {
+	background: url(../images/bg_v1_banner_carousel_nav_hover.png) no-repeat;
+}

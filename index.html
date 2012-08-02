@@ -1,0 +1,72 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Ember.js Template</title>
+    <meta name="description" content="An example Ember.JS Template for more complex systems" />
+    <meta name="author" content="Zak Caley" />
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+      .no-js .loadingApp { 
+        /* this needs to take up the full screen and fade once the site loads */
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+      }
+      body.ember-application .loadingApp {
+        display: none;
+      }
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" media="all" href="css/bootstrap-responsive.css" />
+
+  </head>
+
+  <body>
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+  <div class='loadingApp'>
+    This shoudl contain a loading indicator and it will hide
+    once the the js is loaded and views been activated.
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
+  <!-- scripts concatenated and minified via build script -->
+  <script src="js/libs/jquery.lorem.js"></script>
+  <script src="js/libs/bootstrap.min.js"></script>
+  <script src="js/libs/handlebars-1.0.0.beta.6.js"></script>
+  <script src="js/libs/ember.js"></script>
+
+  <script src="js/app/plugins.js"></script>
+  <script src="js/app/app.js"></script>
+  <script src="js/app/helpers.js"></script>
+  <script src="js/app/controller.js"></script>
+  <script src="js/app/route.js"></script>
+  <script src="js/app/views.js"></script>
+  <!-- end scripts -->
+
+
+
+
+  <!--script> activate this for a production site, 
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script -->
+  </body>
+</html>

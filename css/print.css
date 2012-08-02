@@ -1,0 +1,19 @@
+
+	/* HIDDEN ENTITIES		*/
+	
+	#homepage-banner, .search, .actions, .sign-up-login, #homepage-banner, #right-col, .nav-copyright, nav, #breadcrumbs, .fb-tweet-btns, .feedback, .page-title .banner, #lhs-nav, footer,
+	.print-email, .paging.bottom, .pagination
+	
+	{display: none; visibility: hidden}
+
+	body {background-image: none}
+    tr, td, th {page-break-inside:avoid}
+    thead {display:table-header-group}
+    a {color:#000000}
+	a[href^="http://"]:after{
+		content: " (" attr(href) ") ";
+	}
+
+	header, #content-wrapper, #content  {width: auto; margin: 0 5%; padding: 0; border: 0; height: auto}
+	
+	.compactor .content {display: block!important}

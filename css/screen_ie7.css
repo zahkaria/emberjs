@@ -1,0 +1,53 @@
+/*
+Font sizes:
+ - 10px 0.769em
+ - 11px: 0.846em
+ - 12px: 0.923em
+ - 13px: 1em (base)
+ - 14px: 1.077em
+ - 15px: 1.154em
+ - 16px: 1.231em
+ - 18px: 1.385em
+ - 20px: 1.538em 
+ - 28px: 2.333em 
+ - 32px: 2.462em
+ - 40px: 3.077em (header text)
+*/
+
+ul { margin-left: 18px;}
+
+#homepage-banner-nav ul li {
+    display: inline !important;
+}
+
+
+header .actions {
+	float: right;
+    margin: 25px -50px 0 0;
+	width: 350px;
+}
+
+#content .print-email li {
+    display: inline;
+    padding-left: 10px;
+}
+
+.fb-tweet-btns li {
+    display: inline;
+}
+
+.seminars-events .state-select ul li {
+    display: inline;
+}
+
+.next-prev-buttons li {
+    display: inline;
+}
+
+#homepage-columns .homepage-modules .page-form input[type="radio"]{ height: 13px}
+
+input.btn, .search-btn, .headerSearchSubmit { text-indent: -9000px; line-height: 0; display: block; }
+
+.sign-up-login { bottom: 20px; }
+
+.clearix {min-height: 1%;}
